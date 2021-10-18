@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>날짜 정보 객체</title>
+<script type="text/javascript">
+	//<![CDATA[		
+	// 날짜 객체 생성
+	var t = new Date();                     // 2021-10-07(목)
+	var nowMonth = t.getMonth();  // 10-1 = 9
+	var nowDate = t.getDate();        // 7
+	var nowDay = t.getDay();			 // 4	
+
+	document.write("현재 월:" + nowMonth, "<br />");
+	document.write("현재 일:" + nowDate, "<br />");
+	document.write("현재 요일:" + nowDay, "<br />");
+	
+	
+	var m = new Date("2002/5/31");
+	var theMonth = m.getMonth();
+	var theDate = m.getDate();
+	var theDay = m.getDay();
+
+	document.write("2002월드컵 몇 월:" + theMonth, "<br />");
+	document.write("2002월드컵 몇 일:" + theDate, "<br />");
+	document.write("2002월드컵 무슨 요일:" + theDay, "<br />");
+	//]]>
+</script>
+</head>
+<body>
+
+</body>
+</html>

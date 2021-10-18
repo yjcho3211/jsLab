@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>날짜 정보 객체</title>
+<script type="text/javascript">
+	//<![CDATA[
+	// 오늘 날짜 객체를 생성한다.
+	var t = new Date(); // 2021-10-07 날짜 객체
+	var nowYear = t.getFullYear();
+	
+	var theDate = new Date(nowYear, 11,31); // 2021-12-31 날짜 객체
+	
+	var diffDate = theDate - t; //연말까지 남은 기간 (밀리초)
+	var result = Math.ceil( diffDate / (60 * 1000 * 60 * 24) );
+	
+	
+	//남은 일수를 출력합니다.
+	document.write("현재일로 부터 올해 말일까진 " + result + "일 남았습니다.");
+	
+	//  [과제] 오늘부터 100일 후의 날짜는?
+	t.setDate(t.getDate()+100);
+	
+	document.write("<br>오늘부터 100일 후 = "+t.getFullYear()+"/"+(t.getMonth()+1)+"/"+t.getDate());
+	
+	//]]>
+</script>
+</head>
+<body>
+
+</body>
+</html>
